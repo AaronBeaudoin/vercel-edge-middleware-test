@@ -1,3 +1,7 @@
 export default async function handler(request) {
-  return new Response(`Hello from alternate handler edge function via ${request.url}\n at location ${request.headers.get("Location")}`);
+  return new Response([
+    "Handler: _alternate",
+    `URL: ${request.url}`,
+    `Location: ${request.headers.get("Location")}`
+  ].join("\n"));
 }

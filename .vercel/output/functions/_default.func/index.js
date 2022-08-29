@@ -1,3 +1,7 @@
 export default async function handler(request) {
-  return new Response(`Hello from default handler edge function via ${request.url}`);
+  return new Response([
+    "Handler: _default",
+    `URL: ${request.url}`,
+    `Location: ${request.headers.get("Location")}`
+  ].join("\n"));
 }
