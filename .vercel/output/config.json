@@ -1,10 +1,8 @@
 {
   "version": 3,
   "routes": [
+    { "src": "/fn/(.*)", "middlewarePath": "_middleware", "continue": true },
     { "handle": "filesystem" },
-    {
-      "src": "/blog/(?<slug>[^/]+)(?:/)?",
-      "dest": "/blog?slug=$slug"
-    }
+    { "src": "/(.*)", "dest": "/_default" }
   ]
 }
