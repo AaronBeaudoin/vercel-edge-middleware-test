@@ -3,6 +3,6 @@ export default async function handler(request) {
     "Handler: _default",
     `URL: ${request.url}`,
     `Headers: ${Array.from(request.headers.keys()).join(", ")}`,
-    `Rewrite: ${request.headers.get("x-rewrite")}`
+    `Rewrite: ${request.headers.get("x-custom-rewrite")}`
   ].join("\n"));
 }
