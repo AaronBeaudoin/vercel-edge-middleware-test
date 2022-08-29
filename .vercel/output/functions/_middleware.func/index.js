@@ -1,7 +1,12 @@
+function rewrite(url, path) {
+  const url = new URL(request.url);
+  url.pathname = path;
+  return url.toString();
+}
+
 export default function middleware(request) {
   const response = new Response();
-  response.headers.set("x-spaghetti", "monster");
   response.headers.set("x-middleware-rewrite", "/_alternate");
-  response.headers.set("location", "/");
+  response.headers.set("x-middlware-url", rewrite(request.url, "/"));
   return response;
 }
