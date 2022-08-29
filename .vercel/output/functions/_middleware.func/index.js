@@ -1,5 +1,5 @@
 function rewrite(url, path) {
-  const url = new URL(request.url);
+  url = new URL(url);
   url.pathname = path;
   return url.toString();
 }
