@@ -2,7 +2,6 @@
   "version": 3,
   "routes": [
     { "src": "/fn/(.*)", "middlewarePath": "_middleware", "continue": true },
-    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/_default" }
   ]
 }
