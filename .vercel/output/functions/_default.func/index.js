@@ -25,5 +25,8 @@ export default async function handler(request) {
       <div style="hsl(200, 50%, 50%);">${headers.join("")}</div>
     </body>
     </html>
-  `);
+  `, {
+    status: 200,
+    headers: { "Content-Type": "text/html" }
+  });
 }
