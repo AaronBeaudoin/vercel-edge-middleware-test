@@ -4,7 +4,6 @@
     { "src": "/rewrite", "middlewarePath": "_rewrite" },
     { "src": "/redirect", "middlewarePath": "_redirect" },
     { "handle": "filesystem" },
-    { "src": "/direct", "dest": "/_alternate" },
     { "src": "/(.*)", "dest": "/_default" }
   ]
 }
