@@ -5,6 +5,8 @@ function rewrite(url, path) {
 }
 
 export default function middleware(request) {
+  console.log(`Redirect to: ${"/_alternate" + new URL(request.url).search}`);
+
   return new Response(null, {
     status: 307,
     headers: {
