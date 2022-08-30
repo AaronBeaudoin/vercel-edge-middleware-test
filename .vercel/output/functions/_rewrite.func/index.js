@@ -6,7 +6,7 @@ function rewrite(url, path) {
 
 export default function middleware(request) {
   const response = new Response();
-  response.headers.set("x-middleware-rewrite", "/_alternate");
+  response.headers.set("x-middleware-rewrite", "/_alternate" + new URL(request.url).search);
   response.headers.set("x-custom", rewrite(request.url, "/random"));
   return response;
 }
