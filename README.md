@@ -2,11 +2,11 @@
 
 There are 4 edge functions in this example, 2 of which are edge middleware.
 
-- The `_default` function renders an HTML page displaying some of the data that the function received in the request.
+- The `_default` function renders an HTML page displaying some data from the request.
 - The `_alternate` function is a separate function that is functionally identical to `_default`.
 - The `_rewrite` middleware uses `x-middleware-rewrite` to rewrite to the `_alternate` function. It attempts to pass along query parameters in the rewrite URL and sets a `x-custom` header.
 - The `_redirect` middleware uses a 307 response to redirect to the `_alternate` function. It attempts to pass along query parameters in the redirect URL and sets a `x-custom` header.
-- The `_rewrite` and `_redirect` middlewares can be tested by going to `/rewrite` and `/redirect` respectively.
+- The `_rewrite` and `_redirect` middlewares are run by going to `/rewrite` and `/redirect`.
 - All non-matched routes go to `_default` as a fallback.
 
 ## Reproduction
