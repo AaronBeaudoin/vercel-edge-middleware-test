@@ -17,12 +17,13 @@ export default async function handler(request) {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>div { margin: 0; padding: 0; font-family: monospace; }</style>
+      <style>body > div:last-of-type { margin-top: 1em; }</style>
       <title>Edge Middleware Test</title>
     </head>
     <body>
-      <div style="hsl(000, 50%, 50%);">Handler: _default</div>
-      <div style="hsl(100, 50%, 50%);">URL: ${request.url}</div>
-      <div style="hsl(200, 50%, 50%);">${headers.join("")}</div>
+      <div style="color: hsl(000, 50%, 50%);">Handler: _default</div>
+      <div style="color: hsl(100, 50%, 50%);">URL: ${request.url}</div>
+      <div style="color: hsl(200, 50%, 50%);">${headers.join("")}</div>
     </body>
     </html>
   `, {
