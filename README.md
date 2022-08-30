@@ -29,11 +29,11 @@ In both the `_rewrite` and `_redirect` edge middleware functions, it does not ap
 
 ### Via Query Parameters
 
-In both the `_rewrite` and `_redirect` edge middleware functions the new URL has the request URL's query parameters manually appended. However, as you can see by going to `/rewrite?test` or `/redirect?test`, the `request.url` passed to the `_alternate` edge function has no query parameters. However, for `_rewrite`, it is still present in the browser address bar URL.
+In both the `_rewrite` and `_redirect` edge middleware functions the new URL has the request URL's query parameters manually appended. However, as you can see by going to `/rewrite?test` or `/redirect?test`, the `request.url` passed to the `_alternate` edge function has no query parameters. However, for `_rewrite`, it is still present in the browser address bar URL as expected.
 
 ### Via Headers
 
-In both the `_rewrite` and `_redirect` edge middleware functions a `x-custom` header is added. However, as you can see by going to `/rewrite` or `/redirect`, the `x-custom` header is not in `request.headers`. However, for `_rewrite`, it is still in the headers sent to the browser visible via the network devtools.
+In both the `_rewrite` and `_redirect` edge middleware functions a `x-custom` header is added. However, as you can see by going to `/rewrite` or `/redirect`, the `x-custom` header is not in `request.headers`. However, for `_rewrite`, it is still in the headers sent to the browser visible via the network devtools as expected.
 
 ## The Question
 
