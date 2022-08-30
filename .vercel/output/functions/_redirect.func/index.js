@@ -8,8 +8,8 @@ export default function middleware(request) {
   return new Response(null, {
     status: 307,
     headers: {
-      "Location": "/_alternate",
-      "X-Custom": rewrite(request.url, "/random")
+      "location": "/_alternate",
+      "x-custom": rewrite(request.url, "/random")
     }
   });
 }
