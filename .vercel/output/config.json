@@ -1,7 +1,8 @@
 {
   "version": 3,
   "routes": [
-    { "src": "/test", "middlewarePath": "_middleware" },
+    { "src": "/middle", "middlewarePath": "_middleware" },
+    { "src": "/direct", "dest": "/_alternate" },
     { "src": "/(.*)", "dest": "/_default" }
   ]
 }
