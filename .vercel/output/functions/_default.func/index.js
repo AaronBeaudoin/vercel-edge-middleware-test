@@ -1,11 +1,4 @@
 export default async function handler(request) {
-  // return new Response([
-  //   "Handler: _default",
-  //   `URL: ${request.url}`,
-  //   `Headers: ${Array.from(request.headers.keys()).join(", ")}`,
-  //   `Rewrite: ${request.headers.get("x-custom-rewrite")}`
-  // ].join("\n"));
-
   const headers = Array.from(request.headers.entries()).map(entry => {
     return `<div>${entry[0]}: ${entry[1]}</div>`;
   });
